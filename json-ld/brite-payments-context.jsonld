@@ -1,0 +1,106 @@
+{
+  "@context": {
+    "@vocab": "https://britepayments.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "brite": "https://britepayments.com/schema#",
+    "PostApiApiidRequest": "brite:PostApiApiidRequest",
+    "report_types": {
+      "@id": "brite:report_types",
+      "@container": "@list"
+    },
+    "country_id": {
+      "@id": "brite:country_id",
+      "@type": "xsd:string"
+    },
+    "brand_name": {
+      "@id": "brite:brand_name",
+      "@type": "xsd:string"
+    },
+    "merchant_reference": {
+      "@id": "brite:merchant_reference",
+      "@type": "xsd:string"
+    },
+    "locale": {
+      "@id": "brite:locale",
+      "@type": "xsd:string"
+    },
+    "redirect_uri": {
+      "@id": "brite:redirect_uri",
+      "@type": "xsd:string"
+    },
+    "deeplink_redirect": {
+      "@id": "brite:deeplink_redirect",
+      "@type": "xsd:string"
+    },
+    "callbacks": {
+      "@id": "brite:callbacks",
+      "@container": "@list"
+    },
+    "PostApiApiidResponse": "brite:PostApiApiidResponse",
+    "access_token": {
+      "@id": "brite:access_token",
+      "@type": "xsd:string"
+    },
+    "expires": {
+      "@id": "brite:expires",
+      "@type": "xsd:decimal"
+    },
+    "refresh_token": {
+      "@id": "brite:refresh_token",
+      "@type": "xsd:string"
+    },
+    "PostBankAccountCreateResponse": "brite:PostBankAccountCreateResponse",
+    "id": {
+      "@id": "brite:id",
+      "@type": "xsd:string"
+    },
+    "PostTransactionCreateWithdrawalRequest": "brite:PostTransactionCreateWithdrawalRequest",
+    "amount": {
+      "@id": "brite:amount",
+      "@type": "xsd:string"
+    },
+    "bank_account_id": {
+      "@id": "brite:bank_account_id",
+      "@type": "xsd:string"
+    },
+    "statement_reference": {
+      "@id": "brite:statement_reference",
+      "@type": "xsd:string"
+    },
+    "PostTransactionCreateWithdrawalResponse": "brite:PostTransactionCreateWithdrawalResponse",
+    "eta": {
+      "@id": "brite:eta",
+      "@type": "xsd:integer"
+    },
+    "GetV1AssetsResponse": "brite:GetV1AssetsResponse",
+    "badge": {
+      "@id": "brite:badge",
+      "@type": "xsd:string"
+    },
+    "title": {
+      "@id": "brite:title",
+      "@type": "xsd:string"
+    },
+    "tagline": {
+      "@id": "brite:tagline",
+      "@type": "xsd:string"
+    },
+    "extended_descriptor_text": {
+      "@id": "brite:extended_descriptor_text",
+      "@container": "@list"
+    },
+    "bank_logos": {
+      "@id": "brite:bank_logos",
+      "@container": "@list"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Brite Payments API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Brite Payments's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-15) from openapi/_ae-authored/brite-payments-openapi-generated.yml.",
+  "dcterms:created": "2026-10-15",
+  "dcterms:source": [
+    "openapi/_ae-authored/brite-payments-openapi-generated.yml"
+  ]
+}

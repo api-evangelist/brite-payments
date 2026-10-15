@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/brite-payments/main/json-schema/brite-payments-post-bank-account-create-response-schema.json",
+  "title": "PostBankAccountCreateResponse",
+  "x-generated": "2026-10-15",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/brite-payments-openapi-generated.yml#/components/schemas/PostBankAccountCreateResponse",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    }
+  }
+}

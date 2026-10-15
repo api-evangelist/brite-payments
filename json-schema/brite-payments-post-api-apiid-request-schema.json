@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/brite-payments/main/json-schema/brite-payments-post-api-apiid-request-schema.json",
+  "title": "PostApiApiidRequest",
+  "x-generated": "2026-10-15",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/brite-payments-openapi-generated.yml#/components/schemas/PostApiApiidRequest",
+  "type": "object",
+  "properties": {
+    "report_types": {
+      "type": "array"
+    },
+    "country_id": {
+      "type": "string"
+    },
+    "brand_name": {
+      "type": "string"
+    },
+    "merchant_reference": {
+      "type": "string"
+    },
+    "locale": {
+      "type": "string"
+    },
+    "redirect_uri": {
+      "type": "string"
+    },
+    "deeplink_redirect": {
+      "type": "string"
+    },
+    "callbacks": {
+      "type": "array",
+      "description": "Array of callback objects"
+    },
+    "callbacks[].url": {
+      "type": "string",
+      "description": "Callback URL"
+    },
+    "callbacks[].report_state": {
+      "type": "string",
+      "description": "One of SESSION_ABORTED, SESSION_FAILED, SESSION_COMPLETED, REPORT_GENERATED"
+    }
+  }
+}

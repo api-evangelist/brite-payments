@@ -1,0 +1,293 @@
+openapi: 3.1.0
+info:
+  title: Brite Payments API
+  version: '2026-10-15'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-15: 8 operation(s) read from 9 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; Brite Payments has published no machine-readable contract that
+    the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 5
+    documentation: 3
+    pages-with-code: 7
+    pages-read: 9
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-15'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.britepayments.com/checkout-ux-guidelines/automated-asset-deliver
+  - https://docs.britepayments.com/technical-documentation/authentication
+  - https://docs.britepayments.com/technical-documentation/integrate-instant-payments
+  - https://docs.britepayments.com/technical-documentation/integrate-instant-payouts
+  - https://docs.britepayments.com/technical-documentation/integrate-brite-play
+  - https://docs.britepayments.com/technical-documentation/integrate-data-solutions
+  - https://docs.britepayments.com/technical-documentation/integrate-callback-handling
+  - https://docs.britepayments.com/technical-documentation/integrate-ideal
+  - https://docs.britepayments.com/technical-documentation/integrate-swish
+servers:
+- url: https://sandbox.britepaymentgroup.com
+paths:
+  /api/{apiid}:
+    post:
+      operationId: post_api_apiid
+      tags:
+      - Api
+      summary: Create a request for Reports
+      x-source: https://docs.britepayments.com/technical-documentation/integrate-data-solutions
+      parameters:
+      - name: apiid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiApiidRequest'
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiApiidResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 16 example path(s) differing only at apiId
+  /bank_account.create:
+    post:
+      operationId: post_bank_account_create
+      tags:
+      - Bank Account
+      summary: POST /bank_account.create
+      x-source: https://docs.britepayments.com/technical-documentation/integrate-instant-payouts
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostBankAccountCreateResponse'
+      x-evidence:
+        kind: code-example
+        language: http
+        snippet: " POST /bank_account.create HTTP/1.1\nhostname: sandbox.britepayments.com\nAuthorization: Bearer \n{\n \"country_id\": \"de\"\
+          ,\n \"iban\": \"DE89370400440532013000\",\n \"holder_firstname\": \"Hans\",\n \"holder_lastname\": \"Schmidt\",\n \"holder_dob\": \"\
+          1978-03-22\",\n \"holder_address\": {\n \"city\": \"Berlin\",\n \"postal_code\": \"10115\",\n \"street_address\": \"Musterstraße 1\"\
+          ,\n \"country\": \"Germany\"\n }\n} \n For a full list of all para"
+  /callback:
+    post:
+      operationId: post_callback
+      tags:
+      - Callback
+      summary: Handle callback notifications
+      x-source: https://docs.britepayments.com/technical-documentation/integrate-brite-play
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /session.create_bank_account_selection:
+    post:
+      operationId: post_session_create_bank_account_selection
+      tags:
+      - Session
+      summary: Create Bank Account via Session (Brite Client)
+      x-source: https://docs.britepayments.com/technical-documentation/integrate-instant-payouts
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /transaction.create_withdrawal:
+    post:
+      operationId: post_transaction_create_withdrawal
+      tags:
+      - Transaction
+      summary: 'Step 3: Initiate a Payout'
+      x-source: https://docs.britepayments.com/technical-documentation/integrate-instant-payouts
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTransactionCreateWithdrawalRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTransactionCreateWithdrawalResponse'
+      x-evidence:
+        kind: documentation
+  /transaction.get:
+    post:
+      operationId: post_transaction_get
+      tags:
+      - Transaction
+      summary: Fetch transaction details to obtain a bank_account_id
+      x-source: https://docs.britepayments.com/technical-documentation/integrate-instant-payouts
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1/assets:
+    get:
+      operationId: get_v1_assets
+      tags:
+      - Assets
+      summary: Retrieve Checkout Asset via API
+      description: Endpoint to retrieve localized assets for checkout presentation.
+      x-source: https://docs.britepayments.com/checkout-ux-guidelines/automated-asset-deliver
+      parameters:
+      - name: merchant_id
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Unique Merchant ID (MID) to identify your business.
+      - name: vertical
+        in: query
+        required: true
+        schema:
+          type: string
+        description: 'Business type. Options: ecommerce, gaming, financialServices.'
+      - name: product_type
+        in: query
+        required: true
+        schema:
+          type: string
+        description: 'Type of product: payment, payout, ais, or play.'
+      - name: locale
+        in: query
+        required: true
+        schema:
+          type: string
+        description: 'Language code(ISO 639-1) + country code(ISO 3166-1 alpha-2). Example: en_BE.'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1AssetsResponse'
+      x-evidence:
+        kind: documentation
+  /v1/assets/:
+    get:
+      operationId: get_v1_assets
+      tags:
+      - Assets
+      summary: Display Brite Instant Payments in your Checkout
+      x-source: https://docs.britepayments.com/technical-documentation/integrate-instant-payments
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PostApiApiidRequest:
+      type: object
+      properties:
+        report_types:
+          type: array
+        country_id:
+          type: string
+        brand_name:
+          type: string
+        merchant_reference:
+          type: string
+        locale:
+          type: string
+        redirect_uri:
+          type: string
+        deeplink_redirect:
+          type: string
+        callbacks:
+          type: array
+          description: Array of callback objects
+        callbacks[].url:
+          type: string
+          description: Callback URL
+        callbacks[].report_state:
+          type: string
+          description: One of SESSION_ABORTED, SESSION_FAILED, SESSION_COMPLETED, REPORT_GENERATED
+    PostApiApiidResponse:
+      type: object
+      properties:
+        access_token:
+          type: string
+        expires:
+          type: number
+        refresh_token:
+          type: string
+    PostBankAccountCreateResponse:
+      type: object
+      properties:
+        id:
+          type: string
+    PostTransactionCreateWithdrawalRequest:
+      type: object
+      properties:
+        amount:
+          type: string
+        bank_account_id:
+          type: string
+        merchant_reference:
+          type: string
+        statement_reference:
+          type: string
+        callbacks:
+          type: array
+          description: Array of callback objects with url and transaction_state
+      required:
+      - amount
+      - bank_account_id
+      - merchant_reference
+    PostTransactionCreateWithdrawalResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: The id of the payout transaction
+        eta:
+          type: integer
+          description: Estimated time of arrival
+    GetV1AssetsResponse:
+      type: object
+      properties:
+        badge:
+          type: string
+          description: URL to Brites logotype.
+        title:
+          type: string
+          description: Title of the service.
+        tagline:
+          type: string
+          description: Brief description of the service.
+        extended_descriptor_text:
+          type: array
+          description: Array of strings with detailed information.
+        bank_logos:
+          type: array
+          description: Array of URLs to SVG.
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+security:
+- bearer: []
+tags:
+- name: Api
+- name: Assets
+- name: Bank Account
+- name: Callback
+- name: Session
+- name: Transaction

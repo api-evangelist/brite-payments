@@ -1,0 +1,16 @@
+generated: '2026-10-15'
+source: https://britepayments.com/privacy
+method: probed
+signals:
+  data_retention:
+    - source: https://britepayments.com/privacy
+      http_status: 200
+      fetched: true
+      quote: "How long we retain your data"
+      note: The page states that comment metadata is retained indefinitely and user profile data is stored.
+  data_subject_request:
+    - source: https://britepayments.com/privacy
+      http_status: 200
+      fetched: true
+      quote: "What rights you have over your data"
+      note: Users can request an export of personal data and request erasure, subject to legal obligations.

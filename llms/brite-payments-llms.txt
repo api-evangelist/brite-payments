@@ -1,0 +1,31 @@
+# Brite
+
+> Brite Payments is an instant payments provider headquartered in Stockholm, Sweden and operating across Europe. The fast-growing fintech leverages open banking technology to process real-time account-to-account (A2A) payments between consumers and online merchantsbritepayments.com
+
+Append `.md` to the jobs list or any individual job URL for a markdown version (for example https://careers.britepayments.com/jobs.md).
+
+## Open positions
+
+- [All open positions](https://careers.britepayments.com/jobs): Browse every currently open job. Also available as markdown at https://careers.britepayments.com/jobs.md and as a JSON Feed with embedded JobPosting data at https://careers.britepayments.com/jobs.json.
+- [Software Engineer – Payment Operations](https://careers.britepayments.com/jobs/8330621-software-engineer-payment-operations): Engineering · Stockholm
+- [Information Security Manager](https://careers.britepayments.com/jobs/8477572-information-security-manager): Stockholm
+- [Senior Group Accountant](https://careers.britepayments.com/jobs/8373872-senior-group-accountant): Finance · Stockholm
+- [Technical Product Manager | Data Solutions](https://careers.britepayments.com/jobs/5028843-technical-product-manager-data-solutions): Product · Stockholm
+- [Senior Business Development Manager](https://careers.britepayments.com/jobs/8048291-senior-business-development-manager): Commercial · Stockholm
+- [Software Engineer](https://careers.britepayments.com/jobs/5669389-software-engineer): Engineering · Malaga · Hybrid
+
+## Key pages
+
+- [The hiring process](https://careers.britepayments.com/pages/our-hiring-process): Learn about the Brite Payments hiring process, from your initial application and interviews to assessments and background checks.
+- [Data Privacy for Candidates](https://careers.britepayments.com/pages/data-privacy): Learn how Brite Payments uses cookies to improve your user experience and how you can manage your preferences.
+
+## Optional
+
+- [People](https://careers.britepayments.com/people): The team behind Brite.
+- [Departments](https://careers.britepayments.com/departments): Our departments.
+- [Locations](https://careers.britepayments.com/locations): Office locations.
+- [Team stories](https://careers.britepayments.com/stories): Stories from people who work at Brite.
+- [Privacy policy](https://careers.britepayments.com/privacy-policy): How candidate data is handled.
+- [Cookie policy](https://careers.britepayments.com/cookie-policy): Cookie usage and consent.
+- [Data privacy](https://careers.britepayments.com/data-privacy): Data privacy controls and rights.
+- [API catalog](https://careers.britepayments.com/.well-known/api-catalog): Machine-readable discovery document for available APIs.

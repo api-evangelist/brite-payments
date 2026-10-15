@@ -1,23 +1,123 @@
 aid: brite-payments
+
 name: Brite Payments
-description: 'Brite Payments is a company surfaced via the API Evangelist harvest backlog (source: stockholm-trip)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://britepayments.com/wp-content/uploads/2026/02/home-hero-1024x576.webp
+
+description: Brite Payments is a European payment institution offering instant, secure, and free-to-use online payments by connecting directly
+  to thousands of banks across Europe. It enables merchants to accept “Pay by Bank” payments, providing instant checkout, refunds, and payouts
+  without requiring card details. Brite serves both personal and business customers, supporting e‑commerce, charities, travel, utilities, and
+  gaming, and emphasizes strong security, regulatory compliance, and a seamless user experience.
+
 url: https://raw.githubusercontent.com/api-evangelist/brite-payments/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:stockholm-trip
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-15 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-15'
+
 modified: '2026-10-15'
+
 tags:
 - Company
-apis: []
+- Payments
+- FinTech
+- Europe
+- OnlinePayments
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Spectral
+  url: rules/brite-payments-rules.yml
+- type: JSONLD
+  url: json-ld/brite-payments-context.jsonld
+- type: Vocabulary
+  url: vocabulary/brite-payments-vocabulary.yml
+- type: DataModel
+  url: data-model/brite-payments-data-model.yml
+- type: Conformance
+  url: conformance/brite-payments-conformance.yml
+- type: LLMsTxt
+  url: llms/brite-payments-llms.txt
+- type: WellKnown
+  url: well-known/brite-payments-well-known.yml
+- type: Hosts
+  url: hosts/brite-payments-hosts.yml
+- type: Vendors
+  url: vendors/brite-payments-vendors.yml
+- type: TermsOfService
+  url: https://britepayments.com/terms-conditions/
+- type: PrivacyPolicy
+  url: https://britepayments.com/privacy-notice/
+- type: Newsroom
+  url: https://britepayments.com/resources/press/
+- type: DomainSecurity
+  url: security/brite-payments-domain-security.yml
 - type: Website
   url: https://britepayments.com/
+- type: Documentation
+  url: https://docs.britepayments.com/
+- type: APIReference
+  url: https://docs.britepayments.com/api-documentation/
+- type: GettingStarted
+  url: https://britepayments.com/about/
+- type: Support
+  url: https://britepayments.com/support/
+- type: Blog
+  url: https://britepayments.com/blog/
+
+apis:
+- name: Brite Payments API
+  description: API documentation for Brite Payments offering Pay by Bank integration.
+  humanURL: https://docs.britepayments.com/api-documentation/
+  baseURL: null
+  aid: brite-payments:brite-payments-api-2
+- aid: brite-payments:brite-payments-api
+  name: Brite Payments API
+  description: 'Brite Payments API as documented publicly: 8 operations. Contract generated from the documentation by API Evangelist (2026-10-15);
+
+    not the provider''s own document.'
+  humanURL: https://docs.britepayments.com/checkout-ux-guidelines/automated-asset-deliver
+  baseURL: https://sandbox.britepaymentgroup.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/brite-payments-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-api-apiid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-get-v1-assets-response-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-transaction-create-withdrawal-request-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-transaction-create-withdrawal-response-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-api-apiid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-bank-account-create-response-schema.json
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: API documentation page returns HTML but no OpenAPI, AsyncAPI, GraphQL, gRPC, or WSDL files were found.
+  evidence:
+  - url: https://docs.britepayments.com/api-documentation/
+    status: 200
+  checked: '2026-10-15'
+x-enrichment:
+  date: '2026-10-15'
+  status: enriched
+  artifacts_added: 25
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
