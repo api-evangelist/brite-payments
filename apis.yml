@@ -83,17 +83,16 @@ apis:
   humanURL: https://docs.britepayments.com/api-documentation/
   baseURL: null
   aid: brite-payments:brite-payments-api-2
-- aid: brite-payments:brite-payments-api
-  name: Brite Payments API
-  description: 'Brite Payments API as documented publicly: 8 operations. Contract generated from the documentation by API Evangelist (2026-10-15);
-
-    not the provider''s own document.'
-  humanURL: https://docs.britepayments.com/checkout-ux-guidelines/automated-asset-deliver
+- aid: brite-payments:brite-payments-assets-api
+  name: Brite Payments Assets API
+  description: The Assets API from Brite Payments — 2 operation(s) for assets.
+  humanURL: https://docs.britepayments.com/api-documentation/
   baseURL: https://sandbox.britepaymentgroup.com
+  tags:
+  - Assets
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/brite-payments-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/brite-payments-assets-api-openapi.yml
   - type: JSONSchema
     url: json-schema/brite-payments-post-api-apiid-request-schema.json
   - type: JSONSchema
@@ -106,7 +105,116 @@ apis:
     url: json-schema/brite-payments-post-api-apiid-response-schema.json
   - type: JSONSchema
     url: json-schema/brite-payments-post-bank-account-create-response-schema.json
-
+- aid: brite-payments:brite-payments-bank-account-api
+  name: Brite Payments Bank Account API
+  description: The Bank Account API from Brite Payments — 1 operation(s) for bank account.
+  humanURL: https://docs.britepayments.com/api-documentation/
+  baseURL: https://sandbox.britepaymentgroup.com
+  tags:
+  - Bank Account
+  properties:
+  - type: OpenAPI
+    url: openapi/brite-payments-bank-account-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-api-apiid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-get-v1-assets-response-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-transaction-create-withdrawal-request-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-transaction-create-withdrawal-response-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-api-apiid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-bank-account-create-response-schema.json
+- aid: brite-payments:brite-payments-brite-payments-api-api
+  name: Brite Payments Brite Payments API
+  description: The Brite Payments API API from Brite Payments — 1 operation(s) for brite payments api.
+  humanURL: https://docs.britepayments.com/api-documentation/
+  baseURL: https://sandbox.britepaymentgroup.com
+  tags:
+  - Brite Payments API
+  properties:
+  - type: OpenAPI
+    url: openapi/brite-payments-brite-payments-api-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-api-apiid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-get-v1-assets-response-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-transaction-create-withdrawal-request-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-transaction-create-withdrawal-response-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-api-apiid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-bank-account-create-response-schema.json
+- aid: brite-payments:brite-payments-callback-api
+  name: Brite Payments Callback API
+  description: The Callback API from Brite Payments — 1 operation(s) for callback.
+  humanURL: https://docs.britepayments.com/api-documentation/
+  baseURL: https://sandbox.britepaymentgroup.com
+  tags:
+  - Callback
+  properties:
+  - type: OpenAPI
+    url: openapi/brite-payments-callback-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-api-apiid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-get-v1-assets-response-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-transaction-create-withdrawal-request-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-transaction-create-withdrawal-response-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-api-apiid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-bank-account-create-response-schema.json
+- aid: brite-payments:brite-payments-session-api
+  name: Brite Payments Session API
+  description: The Session API from Brite Payments — 1 operation(s) for session.
+  humanURL: https://docs.britepayments.com/api-documentation/
+  baseURL: https://sandbox.britepaymentgroup.com
+  tags:
+  - Session
+  properties:
+  - type: OpenAPI
+    url: openapi/brite-payments-session-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-api-apiid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-get-v1-assets-response-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-transaction-create-withdrawal-request-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-transaction-create-withdrawal-response-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-api-apiid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-bank-account-create-response-schema.json
+- aid: brite-payments:brite-payments-transaction-api
+  name: Brite Payments Transaction API
+  description: The Transaction API from Brite Payments — 2 operation(s) for transaction.
+  humanURL: https://docs.britepayments.com/api-documentation/
+  baseURL: https://sandbox.britepaymentgroup.com
+  tags:
+  - Transaction
+  properties:
+  - type: OpenAPI
+    url: openapi/brite-payments-transaction-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-api-apiid-request-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-get-v1-assets-response-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-transaction-create-withdrawal-request-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-transaction-create-withdrawal-response-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-api-apiid-response-schema.json
+  - type: JSONSchema
+    url: json-schema/brite-payments-post-bank-account-create-response-schema.json
 x-coverage:
   state: unreadable
   reason: no-machine-readable-spec

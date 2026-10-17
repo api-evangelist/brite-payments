@@ -1,0 +1,113 @@
+openapi: 3.2.0
+info:
+  title: Brite Payments Assets API
+  version: '2026-10-15'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-15: 8 operation(s) read from 9 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Brite Payments has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 5
+    documentation: 3
+    pages-with-code: 7
+    pages-read: 9
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-15'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.britepayments.com/checkout-ux-guidelines/automated-asset-deliver
+  - https://docs.britepayments.com/technical-documentation/authentication
+  - https://docs.britepayments.com/technical-documentation/integrate-instant-payments
+  - https://docs.britepayments.com/technical-documentation/integrate-instant-payouts
+  - https://docs.britepayments.com/technical-documentation/integrate-brite-play
+  - https://docs.britepayments.com/technical-documentation/integrate-data-solutions
+  - https://docs.britepayments.com/technical-documentation/integrate-callback-handling
+  - https://docs.britepayments.com/technical-documentation/integrate-ideal
+  - https://docs.britepayments.com/technical-documentation/integrate-swish
+servers:
+- url: https://sandbox.britepaymentgroup.com
+security:
+- bearer: []
+tags:
+- name: Assets
+paths:
+  /v1/assets:
+    get:
+      operationId: get_v1_assets
+      tags:
+      - Assets
+      summary: Retrieve Checkout Asset via API
+      description: Endpoint to retrieve localized assets for checkout presentation.
+      x-source: https://docs.britepayments.com/checkout-ux-guidelines/automated-asset-deliver
+      parameters:
+      - name: merchant_id
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Unique Merchant ID (MID) to identify your business.
+      - name: vertical
+        in: query
+        required: true
+        schema:
+          type: string
+        description: 'Business type. Options: ecommerce, gaming, financialServices.'
+      - name: product_type
+        in: query
+        required: true
+        schema:
+          type: string
+        description: 'Type of product: payment, payout, ais, or play.'
+      - name: locale
+        in: query
+        required: true
+        schema:
+          type: string
+        description: 'Language code(ISO 639-1) + country code(ISO 3166-1 alpha-2). Example: en_BE.'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetV1AssetsResponse'
+      x-evidence:
+        kind: documentation
+  /v1/assets/:
+    get:
+      operationId: getV1Assets
+      tags:
+      - Assets
+      summary: Display Brite Instant Payments in your Checkout
+      x-source: https://docs.britepayments.com/technical-documentation/integrate-instant-payments
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+      x-operation-id-source: normalized
+      x-operation-id-original: get_v1_assets
+components:
+  schemas:
+    GetV1AssetsResponse:
+      type: object
+      properties:
+        badge:
+          type: string
+          description: URL to Brites logotype.
+        title:
+          type: string
+          description: Title of the service.
+        tagline:
+          type: string
+          description: Brief description of the service.
+        extended_descriptor_text:
+          type: array
+          description: Array of strings with detailed information.
+        bank_logos:
+          type: array
+          description: Array of URLs to SVG.
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

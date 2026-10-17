@@ -1,0 +1,25 @@
+{
+  "provider": "brite-payments",
+  "sources": [
+    "_ae-authored/brite-payments-openapi-generated.yml"
+  ],
+  "outputs": [
+    "brite-payments-assets-api-openapi.yml",
+    "brite-payments-bank-account-api-openapi.yml",
+    "brite-payments-brite-payments-api-api-openapi.yml",
+    "brite-payments-callback-api-openapi.yml",
+    "brite-payments-session-api-openapi.yml",
+    "brite-payments-transaction-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "brite-payments-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "brite-payments-openapi-generated.yml: tagged paths POST /api/{apiid} -> Brite Payments API",
+    "brite-payments-openapi-generated.yml: declared missing tag: Brite Payments API",
+    "apis.yml register: written (+6 apis, 7 total)"
+  ],
+  "skipped": []
+}

@@ -1,0 +1,50 @@
+openapi: 3.2.0
+info:
+  title: Brite Payments Session API
+  version: '2026-10-15'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-15: 8 operation(s) read from 9 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Brite Payments has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 5
+    documentation: 3
+    pages-with-code: 7
+    pages-read: 9
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-15'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.britepayments.com/checkout-ux-guidelines/automated-asset-deliver
+  - https://docs.britepayments.com/technical-documentation/authentication
+  - https://docs.britepayments.com/technical-documentation/integrate-instant-payments
+  - https://docs.britepayments.com/technical-documentation/integrate-instant-payouts
+  - https://docs.britepayments.com/technical-documentation/integrate-brite-play
+  - https://docs.britepayments.com/technical-documentation/integrate-data-solutions
+  - https://docs.britepayments.com/technical-documentation/integrate-callback-handling
+  - https://docs.britepayments.com/technical-documentation/integrate-ideal
+  - https://docs.britepayments.com/technical-documentation/integrate-swish
+servers:
+- url: https://sandbox.britepaymentgroup.com
+security:
+- bearer: []
+tags:
+- name: Session
+paths:
+  /session.create_bank_account_selection:
+    post:
+      operationId: post_session_create_bank_account_selection
+      tags:
+      - Session
+      summary: Create Bank Account via Session (Brite Client)
+      x-source: https://docs.britepayments.com/technical-documentation/integrate-instant-payouts
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+components:
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

@@ -1,0 +1,103 @@
+openapi: 3.2.0
+info:
+  title: Brite Payments API
+  version: '2026-10-15'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-15: 8 operation(s) read from 9 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Brite Payments has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 5
+    documentation: 3
+    pages-with-code: 7
+    pages-read: 9
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-15'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.britepayments.com/checkout-ux-guidelines/automated-asset-deliver
+  - https://docs.britepayments.com/technical-documentation/authentication
+  - https://docs.britepayments.com/technical-documentation/integrate-instant-payments
+  - https://docs.britepayments.com/technical-documentation/integrate-instant-payouts
+  - https://docs.britepayments.com/technical-documentation/integrate-brite-play
+  - https://docs.britepayments.com/technical-documentation/integrate-data-solutions
+  - https://docs.britepayments.com/technical-documentation/integrate-callback-handling
+  - https://docs.britepayments.com/technical-documentation/integrate-ideal
+  - https://docs.britepayments.com/technical-documentation/integrate-swish
+servers:
+- url: https://sandbox.britepaymentgroup.com
+security:
+- bearer: []
+tags:
+- name: Brite Payments API
+paths:
+  /api/{apiid}:
+    post:
+      operationId: post_api_apiid
+      tags:
+      - Brite Payments API
+      summary: Create a request for Reports
+      x-source: https://docs.britepayments.com/technical-documentation/integrate-data-solutions
+      parameters:
+      - name: apiid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApiApiidRequest'
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostApiApiidResponse'
+      x-evidence:
+        kind: documentation
+        collapsed_from: 16 example path(s) differing only at apiId
+components:
+  schemas:
+    PostApiApiidResponse:
+      type: object
+      properties:
+        access_token:
+          type: string
+        expires:
+          type: number
+        refresh_token:
+          type: string
+    PostApiApiidRequest:
+      type: object
+      properties:
+        report_types:
+          type: array
+        country_id:
+          type: string
+        brand_name:
+          type: string
+        merchant_reference:
+          type: string
+        locale:
+          type: string
+        redirect_uri:
+          type: string
+        deeplink_redirect:
+          type: string
+        callbacks:
+          type: array
+          description: Array of callback objects
+        callbacks[].url:
+          type: string
+          description: Callback URL
+        callbacks[].report_state:
+          type: string
+          description: One of SESSION_ABORTED, SESSION_FAILED, SESSION_COMPLETED, REPORT_GENERATED
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
