@@ -27,6 +27,12 @@ modified: '2026-10-15'
 tags:
 - Company
 - Payments
+- Fintech
+- Europe
+- Online Payments
+tags_raw:
+- Company
+- Payments
 - FinTech
 - Europe
 - OnlinePayments
@@ -177,6 +183,8 @@ apis:
   humanURL: https://docs.britepayments.com/api-documentation/
   baseURL: https://sandbox.britepaymentgroup.com
   tags:
+  - Sessions
+  tags_raw:
   - Session
   properties:
   - type: OpenAPI
